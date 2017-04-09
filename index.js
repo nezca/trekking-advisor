@@ -1,10 +1,10 @@
 //------------ npm express setting --------------
 var express = require('express');
 var app = express();
-//var multer = require('multer');
+var multer = require('multer');
 app.use(express.static('public'));
-//var bootstrap = require("express-bootstrap-service");
-//var bodyPaser = require('body-parser');
+var bootstrap = require("express-bootstrap-service");
+var bodyPaser = require('body-parser');
 
 //------------ local server port setting ---------
 app.set('port', (process.env.PORT || 5000));
@@ -12,8 +12,8 @@ app.set('port', (process.env.PORT || 5000));
 //----------- pug(former 'jade') setting -----------
 app.set('view engine','pug');
 app.set('views', './views');
-//app.use(bootstrap.serve);
-//app.use(bodyPaser.urlencoded({extended:false}));
+app.use(bootstrap.serve);
+app.use(bodyPaser.urlencoded({extended:false}));
 
 //--------- ClearDB(mysql) Setting -------------------
 var mysql      = require('mysql');
@@ -53,11 +53,12 @@ app.get('/', function(req,res){
   res.render('intro');
 });
   
-  //------------ 결과 페이지 ---------------
+    //------------ 결과 페이지 ---------------
 
-app.post('/return', function(req,res){  
-  var sql = 'SELECT * FROM course_table order by altitude_vertical_gap desc limit 3';
-  connection.query(sql, function(err, trekkingadvisor, fields){
+app.post('/return', function(req,res){
+  var difficulty_index = req.body.difficulty_index;
+  var sql = 'SELECT * FROM course_table WHERE difficulty_index <= ? order by altitude_vertical_gap desc limit 3';
+  connection.query(sql, [difficulty_index], function(err, trekkingadvisor, fields){
     if(err){
       console.log(err);
       res.status(500).send('what the hell!');
@@ -65,6 +66,19 @@ app.post('/return', function(req,res){
     res.render('return',{trekkingadvisor:trekkingadvisor});   
   });
 });  
+
+  //------------ 결과 페이지 성공_0409 ---------------
+
+//app.post('/return', function(req,res){  
+//  var sql = 'SELECT * FROM course_table order by altitude_vertical_gap desc limit 3';
+//  connection.query(sql, function(err, trekkingadvisor, fields){
+//    if(err){
+//      console.log(err);
+//      res.status(500).send('what the hell!');
+//      }
+//    res.render('return',{trekkingadvisor:trekkingadvisor});   
+//  });
+//});  
 
   //------------ 결과 페이지 ---------------
 

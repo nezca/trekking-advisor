@@ -21,6 +21,7 @@
   "homepage": "https://github.com/nezca/trekking_advisor#readme",
   "dependencies": {
     "express": "^4.15.2",
+    "node-mysql": "^0.4.2",
     "pug": "^2.0.0-beta11"
   }
 }

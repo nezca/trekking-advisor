@@ -57,12 +57,12 @@ app.get('/', function(req,res){
 
 app.post('/return', function(req,res){  
   var sql = 'SELECT * FROM course_table order by altitude_vertical_gap desc limit 3';
-  connection.query(sql, function(err, trekkingadvisor, fields){
+  connection.query(sql, function(err, project_anmg, fields){
     if(err){
       console.log(err);
       res.status(500).send('what the hell!');
       }
-    res.render('return',{trekkingadvisor:trekkingadvisor});   
+    res.render('return',{project_anmg:project_anmg});   
   });
 });  
 

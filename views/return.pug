@@ -1,7 +1,7 @@
 doctype html
 html(lang='ko')
   head
-    title trekking-advisor
+    title github
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
@@ -52,39 +52,14 @@ html(lang='ko')
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
           span.icon-bar
           span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='/') trekking-advisor 
-          span.glyphicon.glyphicon-tree-conifer
+          span.icon-bar      
+        a.navbar-brand(href='/') gilhub
       #myNavbar.collapse.navbar-collapse
         ul.nav.navbar-nav
           li.active
-            a(href='#') Home
-          li.dropdown
-            a.dropdown-toggle(data-toggle='dropdown', href='#')
-              | Page 1 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='#') Page 1-1
-              li
-                a(href='#') Page 1-2
-              li
-                a(href='#') Page 1-3
-          li
-            a(href='#') Page 2
-          li
-            a(href='#') Page 3
-        ul.nav.navbar-nav.navbar-right
-          li
-            a(href='#')
-              span.glyphicon.glyphicon-user
-              |  Sign Up
-          li
-            a(href='#')
-              span.glyphicon.glyphicon-log-in
-              |  Login
+            a(href='/about_us') about us
     .container-fluid
-      each course_table in trekkingadvisor
+      each course_table in gilhub
         #columns
           figure
             iframe(src=course_table.google_map_url frameborder='0' allowfullscreen width='100%' height='300')
@@ -134,67 +109,67 @@ html(lang='ko')
                 tbody(name='position_fix')
                   tr
                     th(scope='row') 출발 지점 주소
-                    td(trekkingadvisor.temporary_address)=course_table.temporary_address
+                    td(gilhub.temporary_address)=course_table.temporary_address
                   tr
                     th(scope='row') 코스 이름                     
-                    td(trekkingadvisor.course_name_first)=course_table.course_name_first
+                    td(gilhub.course_name_first)=course_table.course_name_first
                   tr
                     th(scope='row') 코스 번호                      
-                    td(trekkingadvisor.course_name_second)=course_table.course_name_second
+                    td(gilhub.course_name_second)=course_table.course_name_second
                   tr
                     th(scope='row') 주변 경관             
-                    td(trekkingadvisor.course_name_third)=course_table.course_name_third
+                    td(gilhub.course_name_third)=course_table.course_name_third
                   tr
                     th(scope='row') 코스 스타일
-                    td(trekkingadvisor.course_type)=course_table.course_type
+                    td(gilhub.course_type)=course_table.course_type
                   tr
                     th(scope='row') 복귀 타입
-                    td(trekkingadvisor.route_type)=course_table.route_type
+                    td(gilhub.route_type)=course_table.route_type
                   tr
                     th(scope='row') 접근 방향
-                    td(trekkingadvisor.approach_direction)=course_table.approach_direction
+                    td(gilhub.approach_direction)=course_table.approach_direction
                   tr
                     th(scope='row') 코스 길이
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='코스의 총 길이(단위 km)')
                         span.glyphicon.glyphicon-question-sign
-                    td(trekkingadvisor.distance_trans)=course_table.distance_trans  
+                    td(gilhub.distance_trans)=course_table.distance_trans  
                   tr
                     th(scope='row') 소요 예상 시간
-                    td(trekking-advisor.duration)=course_table.duration
+                    td(gilhub.duration)=course_table.duration
                   tr
                     th(scope='row') 소요 기간 타입
-                    td(trekkingadvisor.duration_type)=course_table.duration_type  
+                    td(gilhub.duration_type)=course_table.duration_type  
                   tr
                     th(scope='row') 출발 지점 고도
-                    td(trekkingadvisor.altitude_origin)=course_table.altitude_origin + 'm'
+                    td(gilhub.altitude_origin)=course_table.altitude_origin + 'm'
                   tr
                     th(scope='row') 최고 지점 고도
-                    td(trekkingadvisor.altitude_top)=course_table.altitude_top + 'm'
+                    td(gilhub.altitude_top)=course_table.altitude_top + 'm'
                   tr
                     th(scope='row') 도착 지점 고도
-                    td(trekkingadvisor.altitude_destination)=course_table.altitude_destination + 'm'
+                    td(gilhub.altitude_destination)=course_table.altitude_destination + 'm'
                   tr
                     th(scope='row') 출발-도착 표고차
-                    td(trekkingadvisor.altitude_vertical_gap)=course_table.altitude_vertical_gap + 'm'
+                    td(gilhub.altitude_vertical_gap)=course_table.altitude_vertical_gap + 'm'
                   tr
                     th(scope='row') 코스 난이도
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='경사도가 심할 수록 힘듬')
                         span.glyphicon.glyphicon-question-sign
-                    td(trekkingadvisor.difficulty_type)=course_table.difficulty_type
+                    td(gilhub.difficulty_type)=course_table.difficulty_type
                   tr
                     th(scope='row') 예상되는 비용
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='예산=간식+식사+숙박+비상금')
                         span.glyphicon.glyphicon-question-sign
-                    td(trekkingadvisor.budget)=course_table.budget+' 원'                   
+                    td(gilhub.budget)=course_table.budget+' 원'                   
                   tr
                     th(scope='row') 출발 지점 경/위도
-                    td(trekkingadvisor.coordinates_origin)=course_table.coordinates_origin 
+                    td(gilhub.coordinates_origin)=course_table.coordinates_origin 
                   tr
                     th(scope='row') 도착 지점 경/위도
-                    td(trekkingadvisor.coordinates_destination)=course_table.coordinates_destination
+                    td(gilhub.coordinates_destination)=course_table.coordinates_destination
                   tr
                     th(scope='row') 작성 운영자
-                    td(trekkingadvisor.input_admin)=course_table.input_admin                                         
+                    td(gilhub.input_admin)=course_table.input_admin                                         
         br
     script.
       $(document).ready(function(){

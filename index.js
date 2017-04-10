@@ -48,12 +48,16 @@ function handleDisconnect() {
 handleDisconnect();
 
 //------------ Pages Routing -------------------------
-  //------------ 첫(조회) 페이지 -------------------------
+  //------------ main(search) page -------------------------
 app.get('/', function(req,res){
   res.render('intro');
 });
-  
-    //------------ 결과 페이지 난이도 조건만 넣음 ---------------
+
+  //------------ sub(about) page -------------------------
+app.get('/about_us', function(req,res){
+  res.render('about_us');
+});
+  //------------ 결과 페이지 난이도 조건만 넣음 ---------------
 
 app.post('/return', function(req,res){
   var country_code = req.body.country_code;
@@ -62,46 +66,16 @@ app.post('/return', function(req,res){
   var difficulty_index = req.body.difficulty_index;
   var budget = req.body.budget;
   var sql = 'SELECT * FROM course_table WHERE country_code = ? and province_code = ? and course_type_code = ? and difficulty_index <= ? and budget <= ?';
-  connection.query(sql, [country_code, province_code, course_type_code, difficulty_index, budget], function(err, trekkingadvisor, fields){
+  connection.query(sql, [country_code, province_code, course_type_code, difficulty_index, budget], function(err, gilhub, fields){
     if(err){
       console.log(err);
       res.status(500).send('what the hell!');
       }
-    res.render('return',{trekkingadvisor:trekkingadvisor});   
+    res.render('return',{gilhub:gilhub});   
   });
 });     
 
-  //------------ 결과 페이지 성공_아무조건도 없음 ---------------
 
-//app.post('/return', function(req,res){  
-//  var sql = 'SELECT * FROM course_table order by altitude_vertical_gap desc limit 3';
-//  connection.query(sql, function(err, trekkingadvisor, fields){
-//    if(err){
-//      console.log(err);
-//      res.status(500).send('what the hell!');
-//      }
-//    res.render('return',{trekkingadvisor:trekkingadvisor});   
-//  });
-//});  
-
-  //------------ 결과 페이지 ---------------
-
-//app.post('/return', function(req,res){
-//  var country_code = req.body.country_code;
-//  var province_code = req.body.province_code;
-//  var course_type_code = req.body.course_type_code;
-//  var duration_rate_code = req.body.duration_rate_code;
-//  var difficulty_index = req.body.difficulty_index; 
-//  var budget = req.body.budget;
-//  var sql = 'SELECT * FROM course_table WHERE country_code <= ? and province_code <= ? and course_type_code <= ? and duration_rate_code <= ? and difficulty_index <= ? and budget <= ? order by altitude_vertical_gap asc limit 3';
-//  connection.query(sql,[country_code, province_code, course_type_code, duration_rate_code, difficulty_index, budget], function(err, trekkingadvisor, fields){
-//    if(err){
-//      console.log(err);
-//      res.status(500).send('what the hell!');
-//      }
-//    res.render('return',{trekkingadvisor:trekkingadvisor});   
-//  });
-//});  
 //----- node.js tutorial's app.listen method -----
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));

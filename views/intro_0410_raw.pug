@@ -123,7 +123,7 @@ html(lang='ko')
             option(value='3') 선택 없음
             option(value='1') 국내 코스
             option(value='2') 해외 코스            
-        legend 
+        legend
         
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='서울, 강원, 경기만 조회됩니다.') 지역을 선택하세요 
           span.glyphicon.glyphicon-question-sign
@@ -147,7 +147,7 @@ html(lang='ko')
             option(value='15') 경상북도
             option(value='16') 경상남도
             option(value='17') 제주특별자치도
-        legend
+        legend        
                 
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='자연속 코스만 조회됩니다.') 코스 스타일을 선택하세요 
           span.glyphicon.glyphicon-question-sign
@@ -161,19 +161,7 @@ html(lang='ko')
             option(value='5') 강 코스           
             option(value='6') 공원 코스           
             option(value='7') 도심 코스           
-        legend 
-        
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='3박 이상은 알아서 가세요.') 기간을 선택하세요 
-          span.glyphicon.glyphicon-question-sign
-        .form-group
-          select.form-control(name='duration_rate_code' required)
-            option(value='4') 선택 없음
-            option(value='0') 산책 코스
-            option(value='1') 당일 코스
-            option(value='2') 1박 2일 코스
-            option(value='3') 2박 3일 코스
-            option(value='4') 3박 이상 코스
-        legend 
+        legend
         
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='5단계로 구분됩니다.') 난이도를 선택하세요 
           span.glyphicon.glyphicon-question-sign
@@ -185,7 +173,7 @@ html(lang='ko')
             option(value='3') 조금 힘들어요
             option(value='4') 많이 힘들어요   
         legend 
-       
+        
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='돈이 많이 들지 않아요.') 예산을 선택하세요 
           span.glyphicon.glyphicon-question-sign
         .form-group
@@ -197,10 +185,30 @@ html(lang='ko')
             option(value='100000') 10만원 이하
             option(value='200000') 20만원 이하
             option(value='999999999') 나는야 금수저일세..
-        legend       
+        legend
         
         button.btn.btn-default.btn-block(type='submit') 코스 검색 (1,689개)
+
     script.
       $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
       });
+        
+
+ 
+//        
+//        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='3박 이상은 알아서 가세요.') 기간을 선택하세요 
+//          span.glyphicon.glyphicon-question-sign
+//        .form-group
+//          select.form-control(name='duration_rate_code' required)
+//            option(value='4') 선택 없음
+//            option(value='0') 산책 코스
+//            option(value='1') 당일 코스
+//            option(value='2') 1박 2일 코스
+//            option(value='3') 2박 3일 코스
+//            option(value='4') 3박 이상 코스
+//        legend 
+//        
+
+//       
+ 

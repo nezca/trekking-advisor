@@ -92,7 +92,7 @@ html(lang='ko')
         .form-group
           select.form-control(name='country_code' required)            
             option(value='1') 대한민국
-            option(value='2') 일본(준비 중입니다)            
+            option(value='2', disabled) 일본(곧 오픈합니다)            
         legend
         
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='현재 강원,제주,충청') 어떤 동네로 떠나세요? 
@@ -100,7 +100,7 @@ html(lang='ko')
         .form-group
           select.form-control(name='province_code' required)
             option(value='10') 강원도           
-            option(value='17') 제주특별자치도
+            option(value='17', disabled) 제주특별자치도(곧 오픈합니다)
         legend        
                 
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='자연속 코스만 조회됩니다.') 어떤 길로 떠나고 싶으세요? 

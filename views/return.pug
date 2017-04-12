@@ -108,19 +108,19 @@ html(lang='ko')
               table.table
                 tbody(name='position_fix')
                   tr
-                    th(scope='row') 출발 지점 주소
+                    th(scope='row') 출발지 주소
                     td(gilhub.temporary_address)=course_table.temporary_address
                   tr
-                    th(scope='row') 코스 이름                     
+                    th(scope='row') 길의 이름                     
                     td(gilhub.course_name_first)=course_table.course_name_first
                   tr
-                    th(scope='row') 코스 번호                      
+                    th(scope='row') 길의 번호                      
                     td(gilhub.course_name_second)=course_table.course_name_second
                   tr
-                    th(scope='row') 주변 경관             
+                    th(scope='row') 길의 경관             
                     td(gilhub.course_name_third)=course_table.course_name_third
                   tr
-                    th(scope='row') 코스 스타일
+                    th(scope='row') 길 스타일
                     td(gilhub.course_type)=course_table.course_type
                   tr
                     th(scope='row') 복귀 타입
@@ -129,27 +129,27 @@ html(lang='ko')
                     th(scope='row') 접근 방향
                     td(gilhub.approach_direction)=course_table.approach_direction
                   tr
-                    th(scope='row') 코스 길이
+                    th(scope='row') 총 길
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='코스의 총 길이(단위 km)')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.distance_trans)=course_table.distance_trans  
                   tr
-                    th(scope='row') 소요 예상 시간
+                    th(scope='row') 걷는 시간
                     td(gilhub.duration)=course_table.duration
                   tr
-                    th(scope='row') 소요 기간 타입
+                    th(scope='row') 걷는 기간
                     td(gilhub.duration_type)=course_table.duration_type  
                   tr
-                    th(scope='row') 출발 지점 고도
+                    th(scope='row') 출발 고도
                     td(gilhub.altitude_origin)=course_table.altitude_origin + 'm'
                   tr
-                    th(scope='row') 최고 지점 고도
+                    th(scope='row') 최고 고도
                     td(gilhub.altitude_top)=course_table.altitude_top + 'm'
                   tr
-                    th(scope='row') 도착 지점 고도
+                    th(scope='row') 도착 고도
                     td(gilhub.altitude_destination)=course_table.altitude_destination + 'm'
                   tr
-                    th(scope='row') 출발-도착 표고차
+                    th(scope='row') 표고차
                     td(gilhub.altitude_vertical_gap)=course_table.altitude_vertical_gap + 'm'
                   tr
                     th(scope='row') 난이도
@@ -157,7 +157,7 @@ html(lang='ko')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.difficulty_type)=course_table.difficulty_type
                   tr
-                    th(scope='row') 예상 비용
+                    th(scope='row') 비용
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='예산=간식+식사+숙박+비상금')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.budget)=course_table.budget+' 원'                   
@@ -165,10 +165,10 @@ html(lang='ko')
                     th(scope='row') 출발 경/위도
                     td(gilhub.coordinates_origin)=course_table.coordinates_origin 
                   tr
-                    th(scope='row') 도착지 경/위도
+                    th(scope='row') 도착 경/위도
                     td(gilhub.coordinates_destination)=course_table.coordinates_destination
                   tr
-                    th(scope='row') 작성 운영자
+                    th(scope='row') 탐방자
                     td(gilhub.input_admin)=course_table.input_admin                                         
         br
     script.

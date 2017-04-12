@@ -152,20 +152,20 @@ html(lang='ko')
                     th(scope='row') 출발-도착 표고차
                     td(gilhub.altitude_vertical_gap)=course_table.altitude_vertical_gap + 'm'
                   tr
-                    th(scope='row') 코스 난이도
+                    th(scope='row') 난이도
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='경사도가 심할 수록 힘듬')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.difficulty_type)=course_table.difficulty_type
                   tr
-                    th(scope='row') 예상되는 비용
+                    th(scope='row') 예상 비용
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='예산=간식+식사+숙박+비상금')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.budget)=course_table.budget+' 원'                   
                   tr
-                    th(scope='row') 출발 지점 경/위도
+                    th(scope='row') 출발 경/위도
                     td(gilhub.coordinates_origin)=course_table.coordinates_origin 
                   tr
-                    th(scope='row') 도착 지점 경/위도
+                    th(scope='row') 도착지 경/위도
                     td(gilhub.coordinates_destination)=course_table.coordinates_destination
                   tr
                     th(scope='row') 작성 운영자

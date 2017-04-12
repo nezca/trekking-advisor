@@ -108,7 +108,7 @@ html(lang='ko')
               table.table
                 tbody(name='position_fix')
                   tr
-                    th(scope='row') 출발지 주소
+                    th(scope='row') 출발:주소
                     td(gilhub.temporary_address)=course_table.temporary_address
                   tr
                     th(scope='row') 길의 이름                     
@@ -129,7 +129,7 @@ html(lang='ko')
                     th(scope='row') 접근 방향
                     td(gilhub.approach_direction)=course_table.approach_direction
                   tr
-                    th(scope='row') 총 길
+                    th(scope='row') 거리(km)
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='코스의 총 길이(단위 km)')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.distance_trans)=course_table.distance_trans  
@@ -162,10 +162,10 @@ html(lang='ko')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.budget)=course_table.budget+' 원'                   
                   tr
-                    th(scope='row') 출발 경/위도
+                    th(scope='row') 출발:경/위도
                     td(gilhub.coordinates_origin)=course_table.coordinates_origin 
                   tr
-                    th(scope='row') 도착 경/위도
+                    th(scope='row') 도착:경/위도
                     td(gilhub.coordinates_destination)=course_table.coordinates_destination
                   tr
                     th(scope='row') 탐방자

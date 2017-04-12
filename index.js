@@ -63,10 +63,12 @@ app.post('/return', function(req,res){
   var country_code = req.body.country_code;
   var province_code = req.body.province_code;
   var course_type_code = req.body.course_type_code;
+  var duration_rate_code = req.body.duration_rate_code;
   var difficulty_type_code = req.body.difficulty_type_code;
+  var route_type_code = req.body.route_type_code
   var budget = req.body.budget;
-  var sql = 'SELECT * FROM course_table WHERE country_code = ? and province_code = ? and course_type_code = ? and difficulty_type_code <= ? and budget <= ?';
-  connection.query(sql, [country_code, province_code, course_type_code, difficulty_type_code, budget], function(err, gilhub, fields){
+  var sql = 'SELECT * FROM course_table WHERE country_code = ? and province_code = ? and course_type_code = ? and duration_rate_code = ? and difficulty_type_code <= ? and route_type_code = ? and budget <= ?';
+  connection.query(sql, [country_code, province_code, course_type_code, duration_rate_code, difficulty_type_code, route_type_code, budget], function(err, gilhub, fields){
     if(err){
       console.log(err);
       res.status(500).send('what the hell!');

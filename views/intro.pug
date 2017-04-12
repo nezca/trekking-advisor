@@ -120,6 +120,18 @@ html(lang='ko')
             option(value='7') 도심 길           
         legend
         
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='3박 이상은 알아서 가세요.') 얼마나 오랫동안 걷고 싶으세요? 
+          span.glyphicon.glyphicon-question-sign
+        .form-group
+          select.form-control(name='duration_rate_code' required)     
+            option(value='0') 산책 코스
+            option(value='1') 반일 코스
+            option(value='2') 당일 코스
+            option(value='3') 1박 2일 코스
+            option(value='4') 2박 3일 코스
+            option(value='5') 3박 이상 코스
+        legend 
+        
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='5단계로 구분됩니다.') 어떤 난이도를 원하세요? 
           span.glyphicon.glyphicon-question-sign
         .form-group
@@ -129,6 +141,14 @@ html(lang='ko')
             option(value='2') 별로 힘들지 않아요
             option(value='3') 조금 힘들어요
             option(value='4') 많이 힘들어요   
+        legend 
+        
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='5단계로 구분됩니다.') 원점으로 회귀하는 길을 원하세요? 
+          span.glyphicon.glyphicon-question-sign
+        .form-group
+          select.form-control(name='route_type_code' required)
+            option(value='2') 네, 다시 출발점으로 돌아올래요.
+            option(value='1') 아니오, 저는 다른곳으로 갈래요.   
         legend 
         
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='돈이 많이 들지 않아요.') 예산을 선택하세요 

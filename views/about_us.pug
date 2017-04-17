@@ -10,23 +10,35 @@ html(lang='ko')
     style. 
       body{        
         background-color:#313a4e;
-      }   
+      }
       legend{
       margin-bottom:0px;
-      }
+      }      
       .container-fluid{
       margin-top:50px;
       padding-left:0px;
       padding-right:0px;
       }
+      .form-group{
+      padding-left:10px;
+      padding-right:10px;
+      margin-bottom:10px;
+      }       
       .img-responsive.img-circle.margin.sub{     
-      opacity:0.8;
       border:1.5px solid rgb(71, 78, 93);
       display:block;
       margin:0 auto;
       background-clip: padding-box;
       }
-      .row{
+      button.btn.btn-default.btn-block{
+      background-color:black;
+      border:1px solid white;
+      font-size:2.5rem;
+      margin-top:10px;
+      margin-bottom:10px;      
+      color:#ffffff;           
+      }
+      h1,p{
       color:white;      
       padding-left:10px;
       padding-right:10px;
@@ -39,45 +51,41 @@ html(lang='ko')
           span.icon-bar
           span.icon-bar
           span.icon-bar      
-        a.navbar-brand(href='/') gilhub
+        a.navbar-brand(href='/') gilhub 
+          
       #myNavbar.collapse.navbar-collapse
         ul.nav.navbar-nav
           li.active
             a(href='/about_us') about us
     .container-fluid
-      .row
-        img.img-responsive(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/flower.png', width='100%', alt='Image')
-      .row        
-        h2 프로젝트 길허브        
+      #myCarousel.carousel.slide(data-ride='carousel')       
+        // Wrapper for slides
+        .carousel-inner(role='listbox')
+          .item.active
+            a(href='/')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/5170334-hiking-wallpaper.jpeg', width='100%', height='auto')
+              .carousel-caption
+                h1 gilhub
+                p PROJECT
+      
+      form(name='position_fix', action='/return', method='post')
         legend
-        br
-        .col-sm-12
-          p
-           | 누구에게나 처음 가는 길은 두려움이 생깁니다.
-          |           
-          p
-           | 내가 걸어온 길을 모두에게 쉽게 알려줄 수 있다면,
-          | 
-          p
-           | 누구나 어렵지 않게 목적지에 갈 수 있습니다.
-          | 
-          p
-           | 길허브 팀은 지구의 모든 코스를 수집합니다.
-          | 
-          p
-           | 길허브 팀은 모두에게 코스를 공개합니다.
-          | 
-          p
-           | 이제 우리는 서로가 서로에게 길을 알려줍니다.
-          | 
-      .row        
-        h2 팀 길허브
-        legend
-        br
-        .col-sm-4
-          a(href='#')
-           img.img-responsive.img-circle.margin.sub(src='	https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/lipin.png', width='170', alt='Image')
-           br
+          h1 STORY
+          legend
+          br
+          p asdasdasdasd
+          p asdasdasd
+          p asdasdasd
+          p asdasdasdasd
+          p asdasdasd
+          p asdasdasd
+          br
+          
+          h1 TEAM
+          legend
+          br          
+          img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/jolbu.jpg', width='170', alt='Image')
+          br
           p
            | Lupin
           | 
@@ -89,10 +97,8 @@ html(lang='ko')
            | lupin@gilhub.io
           | 
           br
-        .col-sm-4
-          a(href='#')
-           img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/mini.jpg', width='170', alt='Image') 
-           br
+          img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/jolbu.jpg', width='170', alt='Image') 
+          br
           p
            | Mini
           | 
@@ -103,10 +109,8 @@ html(lang='ko')
            | mini@gilhub.io
           | 
           br
-        .col-sm-4
-          a(href='#')
-           img.img-responsive.img-circle.margin.sub(src='	https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/able.png', width='170', alt='Image')
-           br
+          img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/jolbu.jpg', width='170', alt='Image')
+          br
           p
            | Able
           | 
@@ -114,13 +118,23 @@ html(lang='ko')
            | web-engineer｜manager
           | 
           p
-           | albe@gilhub.io
+           | able@gilhub.io
           | 
-      .row        
-        h2 길허브와 소통
-        legend
-        br
-        .col-sm-6          
-          a(href='https://www.facebook.com/gilbub.io/') gilhub facebook
-        .col-sm-6
-          p e-mail : info@gilhub.io        
+          br
+          h1 HISTORY
+          legend
+          br
+          p asdasdasdasd
+          p asdasdasd
+          p asdasdasd
+          p asdasdasdasd
+          p asdasdasd
+          p asdasdasd
+          br
+          
+          h1 CONTACT US            
+          legend
+          br
+          p 
+            a(href='https://www.facebook.com/gilbub.io/') Community Center
+          p e-mail : info@gilhub.io

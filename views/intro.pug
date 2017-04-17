@@ -32,12 +32,11 @@ html(lang='ko')
       margin-bottom:10px;      
       color:#ffffff;           
       }
-      a{
+      form a{
       color:white;      
       padding-left:10px;
       padding-right:10px;
       }
-      
   body
     nav.navbar.navbar-inverse.navbar-fixed-top
       .navbar-header
@@ -45,7 +44,8 @@ html(lang='ko')
           span.icon-bar
           span.icon-bar
           span.icon-bar      
-        a.navbar-brand(href='/') gilhub
+        a.navbar-brand(href='/') gilhub 
+          
       #myNavbar.collapse.navbar-collapse
         ul.nav.navbar-nav
           li.active
@@ -61,21 +61,29 @@ html(lang='ko')
         // Wrapper for slides
         .carousel-inner(role='listbox')
           .item.active
-            img(src='	https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/beach.png', alt='beach', width='100%', height='auto')
-            .carousel-caption
-              h4 해안 길              
+            a(href='/')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/5170334-hiking-wallpaper.jpeg', width='100%', height='auto')
+              .carousel-caption
+                h1 소비자 조사
+                p 소비자의 의견을 듣습니다.
           .item
-            img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/city.png', alt='city', width='100%', height='auto')
-            .carousel-caption
-              h4 도심 길              
+            a(href='/')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/city_trek.jpg', width='100%', height='auto')
+              .carousel-caption
+                h2 알파 테스터 모집
+                p 길허브의 베타테스터를 모집합니다.
           .item
-            img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/forest.png', alt='forest', width='100%', height='auto')
-            .carousel-caption
-              h4 숲 길              
+            a(href='/')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/dsc_0504-version-2.jpg', width='100%', height='auto')
+              .carousel-caption
+                h2 강원 오픈 이벤트
+                p 강원도 길이 오픈되었습니다.
           .item
-            img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/river.png', alt='river', width='100%', height='auto')
-            .carousel-caption
-              h4 강 길              
+            a(href='/')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/forest_trek.jpg', alt='seorak', width='100%', height='auto')
+              .carousel-caption
+                h2 페이스북 이벤트
+                p gilhub facebook 바로가기
         // Left and right controls
         a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -144,7 +152,7 @@ html(lang='ko')
         .form-group
           select.form-control(name='route_type_code' required)
             option(value='2') 네, 원점 회귀를 원해요
-            option(value='1') 아니오, 원점회귀를 원하지 않아
+            option(value='1') 아니오, 원점회귀를 원하지 않아요
         legend 
         
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='돈이 많이 들지 않아요.') 예산을 선택하세요 
@@ -159,7 +167,7 @@ html(lang='ko')
             option(value='200000') 20만원 이하            
         legend
         
-        button.btn.btn-default.btn-block(type='submit') 기막힌 길 찾기 (1,689개)
+        button.btn.btn-default.btn-block(type='submit') 기막힌 길 찾기 (1,692개)
 
     script.      
       $(document).ready(function(){

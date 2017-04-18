@@ -38,11 +38,17 @@ html(lang='ko')
       margin-bottom:10px;      
       color:#ffffff;           
       }
-      h1,p{
+      h1,h2,h3,h4,h5,p{
       color:white;      
       padding-left:10px;
       padding-right:10px;
       text-align:center;
+      }
+      h6{
+      text-align:justify;
+      padding-left:10px;
+      padding-right:10px;
+      color:lightgray;
       }
   body
     nav.navbar.navbar-inverse.navbar-fixed-top
@@ -63,60 +69,75 @@ html(lang='ko')
         .carousel-inner(role='listbox')
           .item.active
             a(href='/')
-              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/5170334-hiking-wallpaper.jpeg', width='100%', height='auto')
+              img(src='	https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/abouts.png', width='100%', height='auto')
               .carousel-caption
-                h1 gilhub
-                p PROJECT
+                h2 '길 허브'(gilhub) 프로젝트
       
       form(name='position_fix', action='/return', method='post')
         legend
+          br
           h1 STORY
           legend
           br
-          p asdasdasdasd
-          p asdasdasd
-          p asdasdasd
-          p asdasdasdasd
-          p asdasdasd
-          p asdasdasd
+          p 오랜 친구와 어렵게 시간도 맞췄고,
+          p 운 좋게 금욜 연차라도 받아냈다면,
+          p 그 소박한 성과만으로도 우린 벌써,
           br
-          
+          p 코 끝에는 달큰한 꽃 향기가 맴돌고,
+          p 귓 가에는 철 지난 옛 노래가 들리고,
+          p 눈 앞에는 노을진 바다가 펼쳐지고,
+          p 목 넘김 좋은 찬 맥주 한 캔을 들고
+          p 사뿐 성큼 걷고 있는 것 만 같은데,
+          br
+          p 도대체 어떤 길을 걸어야 좋을지,
+          p 찾는 것도 어렵고 믿을 수도 없다.
+          p 내 시간은 환불도 안되니 말이다.          
+          br          
+          p 내가 원하는 길은 어디에 있을까?
+          br
+          p 우리는 모든 길을 수집합니다.
+          p 그리고 모든 길을 공개합니다.
+          p 그래서 '길허브'라고 부르려 합니다.
+          br
           h1 TEAM
           legend
           br          
           img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/jolbu.jpg', width='170', alt='Image')
           br
+          h4 "이봐! 멋진 길은 내가 찾아 둘테니"
           p
            | Lupin
           | 
           p
           p
            | finance｜manager
-          | 
+          |           
           p
            | lupin@gilhub.io
           | 
           br
-          img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/jolbu.jpg', width='170', alt='Image') 
+          img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/fatcat.png', width='170', alt='Image') 
           br
+          h4 "길 찾는다고 미리 기운 빼지 말고"
           p
            | Mini
           | 
           p
            | marketing｜manager
-          | 
+          |           
           p
            | mini@gilhub.io
           | 
           br
-          img.img-responsive.img-circle.margin.sub(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/jolbu.jpg', width='170', alt='Image')
+          img.img-responsive.img-circle.margin.sub(src='	https://s3.ap-northeast-2.amazonaws.com/gilhub/3.+page_about_us/nezcable.png', width='170', alt='Image')
           br
+          h4 "자넨 그 신발 끈이나 조여두라고!"
           p
            | Able
           | 
           p
            | web-engineer｜manager
-          | 
+          |                          
           p
            | able@gilhub.io
           | 
@@ -124,12 +145,30 @@ html(lang='ko')
           h1 HISTORY
           legend
           br
-          p asdasdasdasd
-          p asdasdasd
-          p asdasdasd
-          p asdasdasdasd
-          p asdasdasd
-          p asdasdasd
+          h6 16년 12월 23일 : 프로젝트를 실현하겠다고 마음을 먹었다.
+          h6 16년 12월 26일 : 프로젝트 팀(mini, lupin)멤버를 구했다.
+          h6 16년 12월 30일 : 프로젝트 이름(project_anmg)을 정했다.
+          h6 16년 12월 27일 : 페이스북 페이지(망구랑..)를 오픈했다.
+          h6 17년 01월 25일 : 팀 운영을 위한 가상 오피스를 오픈했다.
+          h6 17년 01월 01일 : 프로토 타입(ver.01)이 만들어졌다.
+          h6 17년 03월 22일 : 일본 지리 정보를 구했다.
+          h6 17년 03월 31일 : 한국 지리 정보의 1차 정제가 완료됬다.
+          h6 17년 04월 01일 : 프로토 타입(ver.53)이 만들어졌다.
+          h6 17년 04월 06일 : 처음으로 서버가 다운됬다.
+          h6 17년 04월 11일 : 다운된 서버를 복구했다.
+          h6 17년 04월 11일 : 알파 버전으로 개발 업그레이드 했다.
+          h6 17년 04월 12일 : 도메인(gilhub.io)를 등록했다.          
+          h6 17년 04월 19일 : 브랜드 스토리를 작성했다.
+          br 
+          h6 17년 04월 26일 : 알파 테스트를 위한 랜딩 페이지를 구축한다.
+          h6 17년 04월 28일 : 한국 지리 정보 일부가 정제 완료된다.
+          h6 17년 04월 29일 : 일본 지리 정보의 정제 프로세스가 구축된다.
+          h6 17년 04월 30일 : 한국의 강원도 코스를 오픈한다.
+          br
+          h6 17년 2분기 : 한국 데이터 양질화, 일본 데이터 오픈한다.
+          h6 17년 3분기 : 알파 테스트를 통해 개발과 디자인을 고도화 한다.
+          h6 17년 4분기 : 베타 테스트를 론칭한다.
+          h6 18년 : 기존 데이터 양질화, 추가 데이터 오픈, 정식 서비스 론칭
           br
           
           h1 CONTACT US            

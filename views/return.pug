@@ -149,19 +149,6 @@ html(lang='ko')
                                 span.sr-only Next 
                         .modal-footer
                           button.btn.btn-default(type='button', data-dismiss='modal') Close
-                        #shareBtn.btn.btn-success.clearfix Share
-                          p(style='margin-top: 50px')
-                            hr
-                            |  
-                            a.btn.btn-small(href='https://developers.facebook.com/docs/sharing/reference/share-dialog') Share Dialog Documentation
-                          script.
-                            document.getElementById('shareBtn').onclick = function() {
-                            FB.ui({
-                            method: 'share',
-                            display: 'popup',
-                            href: 'https://developers.facebook.com/docs/',
-                            }, function(response){});
-                            }
               table.table
                 tbody(name='position_fix')
                   tr

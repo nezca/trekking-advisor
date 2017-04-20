@@ -223,12 +223,12 @@ html(lang='ko')
           p 
             a(href='https://www.facebook.com/gilbub.io/') Community Center
           p e-mail : info@gilhub.io    
-      #shareBtn.btn.btn-success.clearfix 공유           
-      script.
-        document.getElementById('shareBtn').onclick = function() {
-        FB.ui({
-        method: 'share',
-        display: 'popup',
-        href: 'https://developers.facebook.com/docs/',
-        }, function(response){});
-        }
+  #shareBtn.btn.btn-success.clearfix 공유           
+  script.
+    document.getElementById('shareBtn').onclick = function() {
+    FB.ui({
+    method: 'share',
+    display: 'popup',
+    href: 'https://developers.facebook.com/docs/',
+    }, function(response){});
+    }

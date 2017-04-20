@@ -78,8 +78,8 @@ html(lang='ko')
       img(height='1', width='1', src='https://www.facebook.com/tr?id=1846766325540860&ev=PageView\
       &noscript=1') 
   
-  body
-    script.
+  body  
+    script. 
       window.fbAsyncInit = function() {
       FB.init({
       appId      : '281577488919312',
@@ -206,6 +206,7 @@ html(lang='ko')
           h6 17년 04월 19일 : 브랜드 스토리와 단체의 성격을 정립했다.
           h6 17년 04월 20일 : 웹로그 분석 코드를 심었다.(ga,na,fp)
           br 
+          h6 17년 04월 21일 : 공유 API를 적용하기로 한다.
           h6 17년 04월 26일 : 알파 테스트를 위한 랜딩 페이지를 구축한다.
           h6 17년 04월 28일 : 한국 지리 정보 일부가 정제 완료된다.
           h6 17년 04월 29일 : 일본 지리 정보의 정제 프로세스가 구축된다.
@@ -222,13 +223,4 @@ html(lang='ko')
           br
           p 
             a(href='https://www.facebook.com/gilbub.io/') Community Center
-          p e-mail : info@gilhub.io    
-  #shareBtn.btn.btn-success.clearfix 공유           
-  script.
-    document.getElementById('shareBtn').onclick = function() {
-    FB.ui({
-    method: 'share',
-    display: 'popup',
-    href: 'https://developers.facebook.com/docs/',
-    }, function(response){});
-    }
+          p e-mail : info@gilhub.io

@@ -78,24 +78,7 @@ html(lang='ko')
     img(height='1', width='1', src='https://www.facebook.com/tr?id=1846766325540860&ev=PageView\
     &noscript=1') 
   
-  body  
-  script.
-    window.fbAsyncInit = function() {
-    FB.init({
-    appId      : '281577488919312',
-    xfbml      : true,
-    version    : 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-    };
-    (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    
+  body
     nav.navbar.navbar-inverse.navbar-fixed-top
       .navbar-header
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')

@@ -155,14 +155,8 @@ html(lang='ko')
                     th(scope='row') 출발:주소
                     td(gilhub.temporary_address)=course_table.temporary_address
                   tr
-                    th(scope='row') 길의 이름                     
-                    td(gilhub.course_name_first)=course_table.course_name_first
-                  tr
-                    th(scope='row') 길의 번호                      
-                    td(gilhub.course_name_second)=course_table.course_name_second
-                  tr
-                    th(scope='row') 유명한 장소             
-                    td(gilhub.course_name_third)=course_table.course_name_third
+                    th(scope='row') 길 이름과 번호
+                    td(gilhub.course_name_first)=course_table.course_name_first +'_'+course_table.course_name_second
                   tr
                     th(scope='row') 길 스타일
                     td(gilhub.course_type)=course_table.course_type
@@ -178,20 +172,11 @@ html(lang='ko')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.distance_trans)=course_table.distance_trans  
                   tr
-                    th(scope='row') 걷는 시간
-                    td(gilhub.duration)=course_table.duration
-                  tr
-                    th(scope='row') 걷는 기간
-                    td(gilhub.duration_type)=course_table.duration_type  
-                  tr
-                    th(scope='row') 출발 고도
-                    td(gilhub.altitude_origin)=course_table.altitude_origin + 'm'
+                    th(scope='row') 걷는 시간과 기간
+                    td(gilhub.duration)=course_table.duration +'걸리는'+course_table.duration_type                             
                   tr
                     th(scope='row') 최고 고도
-                    td(gilhub.altitude_top)=course_table.altitude_top + 'm'
-                  tr
-                    th(scope='row') 도착 고도
-                    td(gilhub.altitude_destination)=course_table.altitude_destination + 'm'
+                    td(gilhub.altitude_top)=course_table.altitude_top + 'm'                 
                   tr
                     th(scope='row') 표고차
                     td(gilhub.altitude_vertical_gap)=course_table.altitude_vertical_gap + 'm'
@@ -199,21 +184,7 @@ html(lang='ko')
                     th(scope='row') 난이도
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='경사도가 심할 수록 힘듬')
                         span.glyphicon.glyphicon-question-sign
-                    td(gilhub.difficulty_type)=course_table.difficulty_type
-                  tr
-                    th(scope='row') 비용
-                      a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='예산=간식+식사+숙박+비상금')
-                        span.glyphicon.glyphicon-question-sign
-                    td(gilhub.budget)=course_table.budget+' 원'                   
-                  tr
-                    th(scope='row') 출발:경/위도
-                    td(gilhub.coordinates_origin)=course_table.coordinates_origin 
-                  tr
-                    th(scope='row') 도착:경/위도
-                    td(gilhub.coordinates_destination)=course_table.coordinates_destination
-                  tr
-                    th(scope='row') 탐방자
-                    td(gilhub.input_admin)=course_table.input_admin
+                    td(gilhub.difficulty_type)=course_table.difficulty_type                  
             #shareBtn.btn.btn-success.clearfix 공유           
             script.
               document.getElementById('shareBtn').onclick = function() {

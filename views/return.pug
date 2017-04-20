@@ -74,6 +74,23 @@ html(lang='ko')
     &noscript=1')
   
   body
+  script.
+    window.fbAsyncInit = function() {
+    FB.init({
+    appId      : '281577488919312',
+    xfbml      : true,
+    version    : 'v2.9'
+    });
+    FB.AppEvents.logPageView();
+    };
+    (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  
     nav.navbar.navbar-inverse.navbar-fixed-top
       .navbar-header
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
@@ -197,6 +214,16 @@ html(lang='ko')
                   tr
                     th(scope='row') 탐방자
                     td(gilhub.input_admin)=course_table.input_admin                                         
+        #shareBtn.btn.btn-success.clearfix Share
+        script.
+          document.getElementById('shareBtn').onclick = function() {
+          FB.ui({
+          method: 'share',
+          display: 'popup',
+          href: 'https://developers.facebook.com/docs/',
+          }, function(response){});
+          }
+
         br
     script.
       $(document).ready(function(){

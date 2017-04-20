@@ -152,30 +152,31 @@ html(lang='ko')
               table.table
                 tbody(name='position_fix')
                   tr
-                    th(scope='row') 출발:주소
-                    td(gilhub.temporary_address)=course_table.temporary_address
-                  tr
                     th(scope='row') 길 이름과 번호
                     td(gilhub.course_name_first)=course_table.course_name_first +'_'+course_table.course_name_second
                   tr
-                    th(scope='row') 길 스타일
+                    th(scope='row') 출발지 주소
+                    td(gilhub.temporary_address)=course_table.temporary_address
+                  
+                  tr
+                    th(scope='row') 길의 타입
                     td(gilhub.course_type)=course_table.course_type
                   tr
-                    th(scope='row') 복귀 타입
+                    th(scope='row') 복귀 방법
                     td(gilhub.route_type)=course_table.route_type
                   tr
-                    th(scope='row') 접근 방향
+                    th(scope='row') 들머리 방향
                     td(gilhub.approach_direction)=course_table.approach_direction
                   tr
-                    th(scope='row') 총거리
+                    th(scope='row') 거리
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='코스의 총 길이(단위 km)')
                         span.glyphicon.glyphicon-question-sign
                     td(gilhub.distance_trans)=course_table.distance_trans  
                   tr
                     th(scope='row') 걷는 시간과 기간
-                    td(gilhub.duration)=course_table.duration +'걸리는'+course_table.duration_type                             
+                    td(gilhub.duration)=course_table.duration +'이 걸리는 '+course_table.duration_type                             
                   tr
-                    th(scope='row') 최고 고도
+                    th(scope='row') 정상 높이
                     td(gilhub.altitude_top)=course_table.altitude_top + 'm'                 
                   tr
                     th(scope='row') 표고차

@@ -214,11 +214,7 @@ html(lang='ko')
                   tr
                     th(scope='row') 탐방자
                     td(gilhub.input_admin)=course_table.input_admin
-            #shareBtn.btn.btn-success.clearfix Share
-            p(style='margin-top: 50px')
-              hr
-              |  
-              a.btn.btn-small(href='https://developers.facebook.com/docs/sharing/reference/share-dialog') Share Dialog Documentation
+            #shareBtn.btn.btn-success.clearfix 공유           
             script.
               document.getElementById('shareBtn').onclick = function() {
               FB.ui({

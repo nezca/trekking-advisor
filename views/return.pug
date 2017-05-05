@@ -185,17 +185,7 @@ html(lang='ko')
                     th(scope='row') 난이도
                       a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='경사도가 심할 수록 힘듬')
                         span.glyphicon.glyphicon-question-sign
-                    td(gilhub.difficulty_type)=course_table.difficulty_type                  
-            #shareBtn.btn.btn-success.clearfix 공유           
-            script.
-              document.getElementById('shareBtn').onclick = function() {
-              FB.ui({
-              method: 'share',
-              display: 'popup',
-              href: 'https://developers.facebook.com/docs/',
-              }, function(response){});
-              }
-        br
+                    td(gilhub.difficulty_type)=course_table.difficulty_type
     script.
       $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();

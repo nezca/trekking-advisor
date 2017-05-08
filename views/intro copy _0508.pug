@@ -37,7 +37,35 @@ html(lang='ko')
       padding-left:10px;
       padding-right:10px;
       }
-  body
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-97712975-1', 'auto');
+      ga('send', 'pageview');
+
+    script(type='text/javascript', src='http://wcs.naver.net/wcslog.js')
+    script(type='text/javascript').
+      if(!wcs_add) var wcs_add = {};
+      wcs_add["wa"] = "144f45564c9237";
+      wcs_do();
+
+    script.
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window,document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1846766325540860');
+      fbq('track', 'PageView');
+    noscript
+      img(height='1', width='1', src='https://www.facebook.com/tr?id=1846766325540860&ev=PageView\
+      &noscript=1')
+  
+  body  
     nav.navbar.navbar-inverse.navbar-fixed-top
       .navbar-header
         button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
@@ -64,26 +92,26 @@ html(lang='ko')
             a(href='/')
               img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/5170334-hiking-wallpaper.jpeg', width='100%', height='auto')
               .carousel-caption
-                h1 소비자 조사
-                p 소비자의 의견을 듣습니다.
+                h2 강원도 맵 오픈!
+                p 제주도는 조금만 기다리세요.
           .item
             a(href='/')
               img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/city_trek.jpg', width='100%', height='auto')
               .carousel-caption
-                h2 알파 테스터 모집
-                p 길허브의 베타테스터를 모집합니다.
+                h2 길허브 매거진
+                p 구독을 원하시면 클릭!
           .item
             a(href='/')
               img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/dsc_0504-version-2.jpg', width='100%', height='auto')
               .carousel-caption
-                h2 강원 오픈 이벤트
-                p 강원도 길이 오픈되었습니다.
+                h2 길허브 팟캐스트
+                p 운영진의 코스 개척기
           .item
             a(href='/')
               img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/forest_trek.jpg', alt='seorak', width='100%', height='auto')
               .carousel-caption
                 h2 페이스북 이벤트
-                p gilhub facebook 바로가기
+                p 운영진에게 한 마디
         // Left and right controls
         a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -147,14 +175,6 @@ html(lang='ko')
             option(value='4') 많이 힘들어요   
         legend 
         
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='가던길 돌아오기') 원점으로 회귀하는 길을 원하세요? 
-          span.glyphicon.glyphicon-question-sign
-        .form-group
-          select.form-control(name='route_type_code' required)
-            option(value='2') 네, 원점 회귀를 원해요
-            option(value='1') 아니오, 원점회귀를 원하지 않아요
-        legend 
-        
         a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='돈이 많이 들지 않아요.') 예산을 선택하세요 
           span.glyphicon.glyphicon-question-sign
         .form-group
@@ -173,3 +193,11 @@ html(lang='ko')
       $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
       });
+      
+//        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='가던길 돌아오기') 원점으로 회귀하는 길을 원하세요? 
+//          span.glyphicon.glyphicon-question-sign
+//        .form-group
+//          select.form-control(name='route_type_code' required)
+//            option(value='2') 네, 원점 회귀를 원해요
+//            option(value='1') 아니오, 원점회귀를 원하지 않아요
+//        legend 

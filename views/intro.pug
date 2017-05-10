@@ -5,6 +5,17 @@ html(lang='ko')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    // ------------------ 김현승이 페북 랜딩페이지 설정을 위해서 코드 심으라고한거 -------------
+    link(rel='image_src', href='http://img.png')
+    meta(property='fb:app_id', content='179242432284377')
+    meta(property='og:title', content='세상의 모든 + 걷고 싶은 길')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='www.gilhub.io')
+    meta(property='og:description', content='길허브 테스트')
+    meta(property='og:image', content='http://img.png')
+    meta(property='og:image:width', content='1200')
+    meta(property='og:image:height', content='627')
+    // ------------------ 김현승이 페북 랜딩페이지 설정을 위해서 코드 심으라고한거 종료 -----------
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')    
     style. 
@@ -83,35 +94,16 @@ html(lang='ko')
         // Indicators
         ol.carousel-indicators
           li.active(data-target='#myCarousel', data-slide-to='0')
-          li(data-target='#myCarousel', data-slide-to='1')
-          li(data-target='#myCarousel', data-slide-to='2')
-          li(data-target='#myCarousel', data-slide-to='3')
+
         // Wrapper for slides
         .carousel-inner(role='listbox')
           .item.active
-            a(href='/')
+            a(href='https://www.facebook.com/GilHub.io/')
               img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/5170334-hiking-wallpaper.jpeg', width='100%', height='auto')
               .carousel-caption
-                h2 강원도 맵 오픈!
-                p 제주도는 조금만 기다리세요.
-          .item
-            a(href='/')
-              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/city_trek.jpg', width='100%', height='auto')
-              .carousel-caption
-                h2 길허브 매거진
-                p 구독을 원하시면 클릭!
-          .item
-            a(href='/')
-              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/dsc_0504-version-2.jpg', width='100%', height='auto')
-              .carousel-caption
-                h2 길허브 팟캐스트
-                p 운영진의 코스 개척기
-          .item
-            a(href='/')
-              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/forest_trek.jpg', alt='seorak', width='100%', height='auto')
-              .carousel-caption
-                h2 페이스북 이벤트
-                p 운영진에게 한 마디
+                h2 "등짝,등짝을 보자"
+                p 길허브 페북 방문해서 한 마디!!
+
         // Left and right controls
         a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -123,71 +115,90 @@ html(lang='ko')
         fieldset.form-group
         legend
 
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='현재 강원,제주,충청') 어떤 동네로 떠나세요? 
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='강원도 오픈 17.05.09') 어디로 갈꺼임? 
           span.glyphicon.glyphicon-question-sign
         .form-group
           select.form-control(name='province_code' required)
-            option(value='10') 강원도           
-            option(value='17', disabled) 제주 특별 자치도 (곧 오픈합니다)
-            
-        legend        
-                
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='자연속 코스만 조회됩니다.') 어떤 길로 떠나고 싶으세요? 
-          span.glyphicon.glyphicon-question-sign
-        .form-group
-          select.form-control(name='course_type_code' required)
-            option(value='1') 숲 길
-            option(value='2', disabled) 섬 길 (곧 오픈합니다)
-            option(value='3') 해안 길           
-            option(value='4') 호반 길           
-            option(value='5') 강 길           
-            option(value='6') 공원 길           
-            option(value='7') 도심 길           
+            option(value='10') '강원도'의 힘을 느껴볼까?           
+            option(value='17', disabled) 떠나요~ '제주도' (곧 오픈 예정)            
         legend
         
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='3박 이상은 알아서 가세요.') 얼마나 오랫동안 걷고 싶으세요? 
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='트레킹 기간') 얼마나 걸을꺼임? 
           span.glyphicon.glyphicon-question-sign
         .form-group
           select.form-control(name='duration_rate_code' required)     
-            option(value='0') 산책 코스
-            option(value='1') 반일 코스
-            option(value='2') 당일 코스
-            option(value='3') 1박 2일 코스
-            option(value='4') 2박 3일 코스
-            option(value='5') 3박 이상 코스
+            option(value='0') '두어 시간' 이상은 무리야 헉헉
+            option(value='1') '반 나절' 걷고 한잔 고고?
+            option(value='2') '하루' 종일 걸어야 살 빠짐
+            option(value='3') '1박' 정도는 걸어야 안되겠나?
+            option(value='4') '2박' 3일을 걷는 나는 프로 길럴러~
+            option(value='5') '3박' 이상??? 화이팅!!
         legend 
         
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='5단계로 구분됩니다.') 난이도는 어느정도를 원하세요? 
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='난이도 수준') 체력은 쓸만한감? 
           span.glyphicon.glyphicon-question-sign
         .form-group
           select.form-control(name='difficulty_type_code' required)
-            option(value='4') 체력은 충분해요!
-            option(value='1') 정말 쉬워요
-            option(value='2') 별로 힘들지 않아요
-            option(value='3') 조금 힘들어요
-            option(value='4') 많이 힘들어요   
+            option(value='4') 체력 빼면 X망 캐릭임
+            option(value='1') 이윤석이거나 슬리피 ㅋㅋ
+            option(value='2') 그래도 요(↑)놈들 수준은 아님ㅎ
+            option(value='3') 아마리그 최강자임
+            option(value='4') '위송 빠르크' 급임 ㅋㅋ
         legend 
         
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='돈이 많이 들지 않아요.') 예산을 선택하세요 
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='예산의 정도') 돈은 얼마나 있음? 
           span.glyphicon.glyphicon-question-sign
         .form-group
           select.form-control(name='budget' required)
-            option(value='999999999') 예산은 충분해요!
-            option(value='10000') 1만원 이하
-            option(value='20000') 2만원 이하
-            option(value='50000') 5만원 이하
-            option(value='100000') 10만원 이하
-            option(value='200000') 20만원 이하            
+            option(value='999999999') 내 이름은 '만수르'
+            option(value='10000') '1만원'이면 충분함!
+            option(value='20000') '2만원'이 전재산임..
+            option(value='50000') '5만원'으로 떠나자~
+            option(value='100000') '10만원'있으면 오리백숰ㅋ
+            option(value='200000') '20만원'걸고 만원 더!
         legend
         
-        button.btn.btn-default.btn-block(type='submit') 나만의 길 검색
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='원점회귀 여부') 출발점으로 돌아갈꺼임? 
+          span.glyphicon.glyphicon-question-sign
+        .form-group
+          select.form-control(name='route_type_code' required)
+            option(value='2') ㅇㅇ, 차 가지러 돌아와야 행~
+            option(value='1') 노노, 다시 돌아가지 않겠어!
+        legend 
+        
+        button.btn.btn-default.btn-block(type='submit') #자~그럼#콕#눌러보자
 
     script.      
       $(document).ready(function(){
       $('[data-toggle="tooltip"]').tooltip();
       });
       
-        
+// --------------- 아래 카루셀 1번부터 3번까지 빠져서 슬라이도 빠진거임, (86번 라인 삽입) -------------------------
+//          li(data-target='#myCarousel', data-slide-to='1')
+//          li(data-target='#myCarousel', data-slide-to='2')
+//          li(data-target='#myCarousel', data-slide-to='3')
+      
+// -------------- 메인 페이지 맨위 카루셀 이미지 페이지 1번부터 3번까지, 지금 위에는 0번만 있음 (97번 라인 삽입)-------------------
+//          .item
+//            a(href='/')
+//              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/city_trek.jpg', width='100%', height='auto')
+//              .carousel-caption
+//                h2 길허브 매거진
+//                p 구독을 원하시면 클릭!
+//          .item
+//            a(href='/')
+//              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/dsc_0504-version-2.jpg', width='100%', height='auto')
+//              .carousel-caption
+//                h2 길허브 팟캐스트
+//                p 운영진의 코스 개척기
+//          .item
+//            a(href='/')
+//              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/forest_trek.jpg', alt='seorak', width='100%', height='auto')
+//              .carousel-caption
+//                h2 페이스북 이벤트
+//                p 운영진에게 한 마디
+      
+// ---------------------- 조회 조건: 국적 ---------------------------------- 
 //        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='현재 한국만 서비스 됩니다.') 어떤 나라로 떠나세요? 
 //          span.glyphicon.glyphicon-question-sign
 //        .form-group
@@ -195,12 +206,18 @@ html(lang='ko')
 //            option(value='1') 대한민국
 //            option(value='2', disabled) 일본(곧 오픈합니다)            
 //        legend
-//        
-      
-//        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='가던길 돌아오기') 원점으로 회귀하는 길을 원하세요? 
+
+// ---------------------- 조회 조건: 길 스타일 ----------------------------------
+
+//        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='자연속 코스만 조회됩니다.') 어떤 길로 떠나고 싶으세요? 
 //          span.glyphicon.glyphicon-question-sign
 //        .form-group
-//          select.form-control(name='route_type_code' required)
-//            option(value='2') 네, 원점 회귀를 원해요
-//            option(value='1') 아니오, 원점회귀를 원하지 않아요
-//        legend 
+//          select.form-control(name='course_type_code' required)
+//            option(value='1') 숲 길
+//            option(value='2', disabled) 섬 길 (곧 오픈합니다)
+//            option(value='3') 해안 길           
+//            option(value='4') 호반 길           
+//            option(value='5') 강 길           
+//            option(value='6') 공원 길           
+//            option(value='7') 도심 길           
+//        legend  

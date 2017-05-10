@@ -110,14 +110,14 @@ html(lang='ko')
             figcaption
               .row(style='margin-bottom:5px;')
                 .container                    
-                  button.btn.btn-link.btn-sm(type='button', data-toggle='modal', data-target='#myModal') 구글맵으로 시작 지점 찾아가는 법 
+                  button.btn.btn-link.btn-sm(type='button', data-toggle='modal', data-target='#myModal') 출발 지점 찾아가는 방법! 
                     span.glyphicon.glyphicon-transfer
                   #myModal.modal.fade(role='dialog')
                     .modal-dialog.modal-sm(style='margin-left:60px; margin-right:60px;')
                       .modal-content
                         .modal-header
                           button.close(type='button', data-dismiss='modal') ×
-                          h5.modal-title 구글맵으로 시작 지점 찾아가기
+                          h5.modal-title 출발 지점 찾아가는 방법!
                         .modal-body
                           .container-fluid
                             #myCarousel.carousel.slide(data-ride='carousel')
@@ -131,15 +131,15 @@ html(lang='ko')
                               // Wrapper for slides
                               .carousel-inner(role='listbox')
                                 .item.active
-                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%231.png', alt='구글맵으로 시작점 찾아가기 1번', style='height:auto;')                                  
+                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%231.png', alt='출발 지점 찾아가는 방법! 1번', style='height:auto;')                                  
                                 .item
-                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%232.png', alt='구글맵으로 시작점 찾아가기 2번', style='height:auto;')
+                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%232.png', alt='출발 지점 찾아가는 방법! 2번', style='height:auto;')
                                 .item
-                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%233.png', alt='구글맵으로 시작점 찾아가기 3번', style='height:auto;')
+                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%233.png', alt='출발 지점 찾아가는 방법! 3번', style='height:auto;')
                                 .item
-                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%234.png', alt='구글맵으로 시작점 찾아가기 4번', style='height:auto;')
+                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%234.png', alt='출발 지점 찾아가는 방법! 4번', style='height:auto;')
                                 .item
-                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%235.png', alt='구글맵으로 시작점 찾아가기 5번', style='height:auto;')
+                                  img(src='https://s3.ap-northeast-2.amazonaws.com/projectanmg/images/googlemap_%235.png', alt='출발 지점 찾아가는 방법! 5번', style='height:auto;')
                               // Left and right controls
                               a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
                                 span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -152,39 +152,28 @@ html(lang='ko')
               table.table
                 tbody(name='position_fix')
                   tr
-                    th(scope='row') 길 이름과 번호
+                    th(scope='row') #이름
                     td(gilhub.course_name_first)=course_table.course_name_first +'_'+course_table.course_name_second
                   tr
-                    th(scope='row') 출발지 주소
-                    td(gilhub.temporary_address)=course_table.temporary_address
-                  
+                    th(scope='row') #주소
+                    td(gilhub.temporary_address)=course_table.temporary_address                  
                   tr
-                    th(scope='row') 길의 타입
+                    th(scope='row') #스타일
                     td(gilhub.course_type)=course_table.course_type
                   tr
-                    th(scope='row') 복귀 방법
-                    td(gilhub.route_type)=course_table.route_type
-                  tr
-                    th(scope='row') 들머리 방향
-                    td(gilhub.approach_direction)=course_table.approach_direction
-                  tr
-                    th(scope='row') 거리
-                      a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='코스의 총 길이(단위 km)')
-                        span.glyphicon.glyphicon-question-sign
+                    th(scope='row') #길이                   
                     td(gilhub.distance_trans)=course_table.distance_trans  
                   tr
-                    th(scope='row') 걷는 시간과 기간
-                    td(gilhub.duration)=course_table.duration +'이 걸리는 '+course_table.duration_type                             
+                    th(scope='row') #시간
+                    td(gilhub.duration)=course_table.duration +'이 걸리는 '+"'"+course_table.duration_type+"'"    
                   tr
-                    th(scope='row') 정상 높이
+                    th(scope='row') #정상
                     td(gilhub.altitude_top)=course_table.altitude_top + 'm'                 
                   tr
-                    th(scope='row') 표고차
+                    th(scope='row') #표고차
                     td(gilhub.altitude_vertical_gap)=course_table.altitude_vertical_gap + 'm'
                   tr
-                    th(scope='row') 난이도
-                      a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='경사도가 심할 수록 힘듬')
-                        span.glyphicon.glyphicon-question-sign
+                    th(scope='row') #난이도
                     td(gilhub.difficulty_type)=course_table.difficulty_type
     script.
       $(document).ready(function(){

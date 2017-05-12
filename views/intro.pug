@@ -83,8 +83,7 @@ html(lang='ko')
           span.icon-bar
           span.icon-bar
           span.icon-bar      
-        a.navbar-brand(href='/') gilhub 
-          
+        a.navbar-brand(href='/') #세상의모든#길허브
       #myNavbar.collapse.navbar-collapse
         ul.nav.navbar-nav
           li.active
@@ -94,16 +93,21 @@ html(lang='ko')
         // Indicators
         ol.carousel-indicators
           li.active(data-target='#myCarousel', data-slide-to='0')
-
+          li(data-target='#myCarousel', data-slide-to='1')
         // Wrapper for slides
         .carousel-inner(role='listbox')
           .item.active
-            a(href='https://www.facebook.com/GilHub.io/')
+            a(href='/')
               img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/5170334-hiking-wallpaper.jpeg', width='100%', height='auto')
               .carousel-caption
-                h2 "등짝,등짝을 보자"
-                p 길허브 페북 방문해서 한 마디!!
-
+                h2 강원도 & 제주도
+                p 맵 1차 업데이트_17.05.09
+          .item
+            a(href='https://www.facebook.com/GilHub.io/')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/gilhub/1.+page_intro/city_trek.jpg', width='100%', height='auto')
+              .carousel-caption
+                h2 운영자와 대화를!
+                p 길허브 페이스북 페이지로
         // Left and right controls
         a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -115,7 +119,7 @@ html(lang='ko')
         fieldset.form-group
         legend
 
-        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='강원도 오픈 17.05.09') 어디로 갈꺼임? 
+        a(href='#position_fix', data-toggle='tooltip', data-placement='right', title='이제 곧 경기도 맵 업데이트!!') 어디로 갈꺼임? 
           span.glyphicon.glyphicon-question-sign
         .form-group
           select.form-control(name='province_code' required)
@@ -173,8 +177,7 @@ html(lang='ko')
       $('[data-toggle="tooltip"]').tooltip();
       });
       
-// --------------- 아래 카루셀 1번부터 3번까지 빠져서 슬라이도 빠진거임, (86번 라인 삽입) -------------------------
-//          li(data-target='#myCarousel', data-slide-to='1')
+// --------------- 아래 카루셀 1번부터 3번까지 빠져서 슬라이도 빠진거임, (97번 라인 삽입) -------------------------
 //          li(data-target='#myCarousel', data-slide-to='2')
 //          li(data-target='#myCarousel', data-slide-to='3')
       

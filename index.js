@@ -65,7 +65,7 @@ app.post('/return', function(req,res){
   var difficulty_type_code = req.body.difficulty_type_code;  
   var budget = req.body.budget;
   var route_type_code = req.body.route_type_code;
-  var sql = 'SELECT * FROM course_table WHERE province_code = ? and duration_rate_code = ? and difficulty_type_code <= ? and budget <= ? and route_type_code = ? limit 4';
+  var sql = 'SELECT * FROM course_table WHERE province_code = ? and duration_rate_code = ? and difficulty_type_code <= ? and budget <= ? and route_type_code = ?';
   connection.query(sql, [province_code, duration_rate_code, difficulty_type_code, budget, route_type_code], function(err, gilhub, fields){
     if(err){
       console.log(err);
